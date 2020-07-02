@@ -84,16 +84,21 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+  Author's custom styles
+  ========================================================================== */
 
-body {
-  width: 100%;
+/* -------------------- Mobile Styles -----------------*/
+
+  /* ==========================================================================
+    Homepage Page
+  ========================================================================== */
+  body {
+  width: fit-content;
   height: auto;
   font-size: 14px;
   padding-left: .0555%;
   padding-right: .0555%;
-  padding-top: 1rem;
+  padding-top: 2.142rem;
   /*color: #e2e3ed*/
 }  
 
@@ -101,17 +106,18 @@ body {
   max-width: 90%;
   height: auto;
   margin: auto;
-}
-
- /* -------------------- Base Header - Footer Styles -----------------*/
-header,
-footer  {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-content: center;
+}
+
+  /* -------------------- Base Header - Footer Styles -----------------*/
+header,
+footer  {
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 2.357rem;
 }
 
 header img {
@@ -137,7 +143,7 @@ header nav ul li {
   list-style: none;
 }
 
-/* -------------------- Base Header - Footer Styles -----------------*/
+/* -------------------- <h1 to h4> <p> <a> Font  Styles -----------------*/
 h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
@@ -170,7 +176,7 @@ a {
   text-decoration: none;
 }
 
-/* -------------------- Mobile Styles - Homepage -----------------*/
+/* --------------------Body Styles-----------------*/
 
 /* Hero Area */
 
@@ -184,7 +190,7 @@ a {
   font-size: .777rem;
   line-height: 1.2857rem;
 }
- 
+  
 /* Aside */
 
 aside {
@@ -200,33 +206,26 @@ aside {
 }  
 
 /* Features */
-
-.features {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  align-content: center;
-}
-
 .features p {
   text-align: center;
   width: 55.55%;
   margin-left: 22.22%;
 }
 
+/* Reviews */
 .reviews h2 {
   line-height: 2.142rem;
 }
 
 /* ==========================================================================
-   About Page
-   ========================================================================== */
-   #about h1 {
+    About Page
+    ========================================================================== */
+    #about h1 {
     font-size: 2.1428rem;
     line-height: 2.1428rem;
 }
 
-   #about .features-items p {
+    #about .features-items p {
     text-align: left;
     width: 100%;
     margin-left: 0;
@@ -246,22 +245,184 @@ aside {
     line-height: 1.7142rem;
   }
 
-   #faq .features-items p {
+    #faq .features-items p {
     text-align: left;
     width: 100%;
     margin-left: 0;
-}
+  }
 
-/* -------------------- Tablet Styles - Homepage -------------------- *
+/* ---------------------------- Tablet Styles  ----------------------------*/
   @media only screen and (min-width: 768px) {
-    .content-wrapper {
-      max-width: 640px;
-      margin: 100px 0;
+  /* ==========================================================================
+    Homepage Page
+  ========================================================================== */
+  body {
+    font-size: 18px;
+    padding-left: 8.3333%;
+    padding-right: 8.3333%;    
+  }
+
+  .content-wrapper {
+    flex-flow: row;
+  }
+  
+  /* -------------------- Base Header - Footer Styles -----------------*/
+  header {
+    text-align: left;
+  }
+
+  header img {
+    max-width: 12.22rem;
+    text-align: left;
+  }
+
+  header nav {
+    width: 12.22rem;
+  }
+
+  header nav ul {
+    max-width: 7.2222rem;
+    padding-right: 0;
+    padding-left: 5.4687%;   
+  }
+  
+  footer .footer-content {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  footer .copyright p {
+    text-align: center;
+  }
+
+  /* -------------------- <h1 to h4> <p> <a> Base Font Styles -----------------*/
+  h1 {
+    font-size: 2.6666rem;
+    line-height: 2.6666rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 2.6666rem;
+  }
+
+  h3, h4 {
+    font-size: 1.3333rem;
+    line-height: 1.6666rem;
+  }
+
+  p {
+    line-height: 1rem;
+  }
+
+  a {
+    font-size: .8888rem;
+  }
+
+/* --------------------Body Styles-----------------*/
+/* Hero */
+  .hero-area .content-wrapper {
+    margin-top: 2.3571rem;
+    margin-bottom: 23.33rem;
+  }
+/* Aside */
+  aside .content-wrapper {
+    justify-content: flex-start;
+  }
+ 
+  aside .form-description {
+    width: 50%;
+    margin-right: 11.72%;
+  }
+
+  aside .form {
+    width: 50%;
+  }
+
+ /* Features */
+  .features .content-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 5.5rem 0;
+  }
+
+  .features .features-items {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .features article {
+    width: 50%;
+  }
+
+/* Reviews */
+  .reviews .content-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 5.5rem 0;
+  }
+  
+  .reviews article {
+    width: 50%;
+  }
+
+
+/* ==========================================================================
+  About Page
+========================================================================== */
+  #about .mission {
+    margin: .3333rem 0;
+  }  
+
+  #about .mission .content-wrapper {
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+
+   #about .mission .content-wrapper p {
+    width: 45%;
+    display: inline-flex;
+    padding-right: 2.9%;
+  }
+
+  /* ==========================================================================
+    FAQ Page
+  ========================================================================== */
+  #faq .features {
+    margin: 5.7222rem 0;
+  }
+  #faq .features .content-wrapper {
+    flex-flow: row wrap;
+  }
+
+  #faq .features .features-items {
+    justify-content: flex-start;
+    width: 45%;
+    padding-right: 3.3%;
+  }
+
+  #faq .features article {
+    width: 100%;
+  }  
+
+  #faq .contact {
+    margin-bottom: 5rem;
   }
   
 /* -------------------- Desktop Styles - Homepage -------------------/
      
   @media only screen and (min-width: 1200px) {
+    /* ==========================================================================
+    Homepage Page
+    ========================================================================== */
+    /* ==========================================================================
+    About Page
+    ========================================================================== */
+    /* ==========================================================================
+    FAQ Page
+    ========================================================================== */
     
     }
 
